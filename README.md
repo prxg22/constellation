@@ -1,10 +1,10 @@
 # Constellation
 
 <p align="center">
-  <img src="../apsis_brand_v5/svg/constellation_logo_dark.svg" alt="Constellation" width="320" />
+  <img src="assets/brand/svg/constellation_logo_dark.svg" alt="Constellation" width="320" />
 </p>
 
-Constellation is the Apsis orchestration library for multiplexing AI agent CLIs. It currently ships under the compatibility module path and CLI binary name `agents-mux` while the user-facing product name transitions to Constellation.
+Constellation is an orchestration library for multiplexing AI agent CLIs. It currently ships under the compatibility module path and CLI binary name `agents-mux`.
 
 ## Features
 
@@ -93,7 +93,7 @@ func main() {
 
 ## Related Projects
 
-- **[Perigee](https://github.com/prxg22/ai-remote-screen)** — Apsis remote desktop workspace. This library was extracted from its session management. Both projects are co-developed and may be modified together.
+- **[Perigee](https://github.com/prxg22/ai-remote-screen)** — Remote desktop workspace. This library was extracted from its session management. Both projects are co-developed and may be modified together.
 
 ## Requirements
 
