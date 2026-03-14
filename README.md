@@ -1,7 +1,7 @@
 # Constellation
 
 <p align="center">
-  <img src="../perigee/assets/brand/svg/constellation_logo_dark.svg" alt="Constellation" width="320" />
+  <img src="../apsis_brand_v5/svg/constellation_logo_dark.svg" alt="Constellation" width="320" />
 </p>
 
 Constellation is the Apsis orchestration library for multiplexing AI agent CLIs. It currently ships under the compatibility module path and CLI binary name `agents-mux` while the user-facing product name transitions to Constellation.
