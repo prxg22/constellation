@@ -1,5 +1,7 @@
 # API Reference
 
+Constellation currently publishes this API under the compatibility module path `github.com/prxg22/agents-mux`.
+
 ## Manager
 
 ### Constructor

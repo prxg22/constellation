@@ -2,7 +2,7 @@
 
 ## Overview
 
-agents-mux is built around a central `Manager` that coordinates session lifecycle, agent subprocess management, event broadcasting, and queue processing. All state is persisted in SQLite with per-session JSONL conversation logs.
+Constellation is built around a central `Manager` that coordinates session lifecycle, agent subprocess management, event broadcasting, and queue processing. All state is persisted in SQLite with per-session JSONL conversation logs. The current compatibility binary and module path remain `agents-mux`.
 
 ## Core Components
 

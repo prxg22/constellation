@@ -1,6 +1,10 @@
-# agents-mux
+# Constellation
 
-A Go library for multiplexing AI agent CLI tools. Spawn, manage, and stream output from multiple agent processes (Claude, Codex, OpenCode, Cursor) through a unified session-based API with real-time SSE broadcasting, queue management, and conversation persistence.
+<p align="center">
+  <img src="../perigee/assets/brand/svg/constellation_logo_dark.svg" alt="Constellation" width="320" />
+</p>
+
+Constellation is the Apsis orchestration library for multiplexing AI agent CLIs. It currently ships under the compatibility module path and CLI binary name `agents-mux` while the user-facing product name transitions to Constellation.
 
 ## Features
 
@@ -16,6 +20,8 @@ A Go library for multiplexing AI agent CLI tools. Spawn, manage, and stream outp
 - **Environment isolation** — Isolated config directories prevent agent CLI leakage
 
 ## Installation
+
+The public module path remains `github.com/prxg22/agents-mux` for compatibility in this pass.
 
 ```bash
 go get github.com/prxg22/agents-mux
@@ -84,6 +90,10 @@ func main() {
 | Codex | `codex` | o4-mini | NDJSON (item.completed/turn.completed) |
 | OpenCode | `opencode` | — | NDJSON (text/tool_use/step_finish) |
 | Cursor | `agent` | — | NDJSON (assistant/tool_call/result) |
+
+## Related Projects
+
+- **[Perigee](https://github.com/prxg22/ai-remote-screen)** — Apsis remote desktop workspace. This library was extracted from its session management. Both projects are co-developed and may be modified together.
 
 ## Requirements
 

@@ -4,6 +4,8 @@
 
 `Config` is passed to `NewManager()` to initialize the library.
 
+Constellation currently keeps the `agents-mux` module path and binary name for compatibility. Config examples below use the library API, independent of the transitional CLI name.
+
 ```go
 cfg := mux.Config{
     // Required: SQLite database file path.

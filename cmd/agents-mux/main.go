@@ -26,7 +26,7 @@ type CLIConfig struct {
 
 func defaultConfig() CLIConfig {
 	home, _ := os.UserHomeDir()
-	base := filepath.Join(home, ".agents-mux")
+	base := filepath.Join(home, ".constellation")
 	return CLIConfig{
 		DBPath:     filepath.Join(base, "db", "mux.db"),
 		SessionDir: filepath.Join(base, "sessions"),
@@ -36,12 +36,12 @@ func defaultConfig() CLIConfig {
 
 var rootCmd = &cobra.Command{
 	Use:   "agents-mux",
-	Short: "AI agent CLI orchestrator",
-	Long:  "agents-mux manages AI agent sessions, queues, and prompts from the command line.",
+	Short: "Constellation AI agent CLI orchestrator",
+	Long:  "Constellation manages AI agent sessions, queues, and prompts from the command line. The binary name remains agents-mux for compatibility.",
 }
 
 func init() {
-	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default ~/.agents-mux/config.yaml)")
+	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default ~/.constellation/config.yaml, falls back to ~/.agents-mux/config.yaml)")
 	rootCmd.PersistentFlags().BoolVarP(&yesMode, "yes", "y", false, "non-interactive mode (skip confirmations)")
 
 	rootCmd.AddCommand(sessionCmd)
@@ -61,7 +61,12 @@ func loadConfig() CLIConfig {
 	path := cfgFile
 	if path == "" {
 		home, _ := os.UserHomeDir()
-		path = filepath.Join(home, ".agents-mux", "config.yaml")
+		legacyPath := filepath.Join(home, ".agents-mux", "config.yaml")
+		if _, err := os.Stat(legacyPath); err == nil {
+			path = legacyPath
+		} else {
+			path = filepath.Join(home, ".constellation", "config.yaml")
+		}
 	}
 	data, err := os.ReadFile(path)
 	if err == nil {

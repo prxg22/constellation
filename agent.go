@@ -286,7 +286,7 @@ func (m *Manager) buildClaudeCommand(agentPath, sessionID, prompt string, req Se
 	args := []string{"-p", "--output-format", "stream-json", "--verbose", "--dangerously-skip-permissions"}
 
 	if mcpConfig != "" {
-		mcpDir := filepath.Join(os.TempDir(), "agents-mux-mcp")
+		mcpDir := filepath.Join(os.TempDir(), "constellation-mcp")
 		os.MkdirAll(mcpDir, 0755)
 		mcpPath := filepath.Join(mcpDir, fmt.Sprintf("mcp-%s.json", sessionID))
 		os.WriteFile(mcpPath, []byte(mcpConfig), 0644)
@@ -359,7 +359,7 @@ func (m *Manager) buildCursorCommand(agentPath, sessionID, prompt string, req Se
 		mcpConfig, _ = m.config.MCPProvider.MCPConfig(sessionID, "cursor")
 	}
 
-	cursorWorkspace := filepath.Join(os.TempDir(), "agents-mux-cursor")
+	cursorWorkspace := filepath.Join(os.TempDir(), "constellation-cursor")
 	cursorDir := filepath.Join(cursorWorkspace, ".cursor")
 	os.MkdirAll(cursorDir, 0755)
 	if mcpConfig != "" {
