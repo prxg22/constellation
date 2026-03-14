@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="220" viewBox="0 0 1120 220" fill="none"><rect width="100%" height="100%" fill="#0A0F14"/><g transform="translate(18,18) scale(0.72)">
+<g stroke="#E8EEF2" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none">
+  <path d="M128 44 L128 96"/>
+  <path d="M128 160 L128 212"/>
+  <path d="M68 128 L96 128"/>
+  <path d="M160 128 L188 128"/>
+  <path d="M112 112 L120 120"/>
+  <path d="M144 112 L136 120"/>
+  <path d="M112 144 L120 136"/>
+  <path d="M144 144 L136 136"/>
+</g>
+<g fill="#6FB7FF">
+  <circle cx="128" cy="38" r="9"/>
+  <circle cx="128" cy="218" r="9"/>
+  <circle cx="62" cy="128" r="9"/>
+  <circle cx="194" cy="128" r="9"/>
+</g>
+<path d="M128 120 L136 128 L128 136 L120 128 Z" fill="#9FE3D2"/>
+</g><text x="215" y="130" fill="#E8EEF2" font-family="Helvetica, Arial, sans-serif" font-size="56" font-weight="600" letter-spacing="2">CONSTELLATION</text></svg>
