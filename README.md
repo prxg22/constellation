@@ -93,7 +93,7 @@ func main() {
 
 ## Related Projects
 
-- **[Perigee](https://github.com/apsis-ai/perigee)** — Remote desktop workspace. This library was extracted from its session management. Both projects are co-developed and may be modified together.
+- **[Perigee](https://github.com/apsis-ai/perigee)** — Apsis remote desktop workspace. This library was extracted from its session management. Both projects are co-developed and may be modified together.
 
 ## Requirements
 
